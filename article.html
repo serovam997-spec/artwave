@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная новость недели — ArtWave</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel"=icon" type"=image/svg+xml" href"=favicon.svg">
+    <meta property="og:title" content="Главная новость недели: подробности | ArtWave">
+    <meta property="og:description" content="Читайте подробности главного культурного события недели: репортаж, мнения критиков, фото.">
+    <meta property="og:image" content="http://127.0.0.1:5500/images/кар.webp">
+    <meta property="og:url" content="http://127.0.0.1:5500/article.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="ArtWave">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="article:published_time" content="2026-03-04">
+    <meta property="article:author" content="Редакция ArtWave">
+</head>
+<body>
+
+<header>
+    <div class="container header-container">
+        <a href="index.html" class="logo">ArtWave</a>
+        
+        <!-- Кнопка-бургер (появляется на мобильных) -->
+        <button class="burger-menu" id="burger-menu" aria-label="Меню" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Навигация (будет скрыта на мобильных по умолчанию) -->
+        <nav class="main-nav" id="main-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="article.html">Новости</a></li>
+                <li><a href="theatre.html">Театр</a></li>
+                <li><a href="cinema.html">Кино</a></li>
+                <li><a href="exhibition.html">Выставки</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="article-page">
+
+    <div class="container">
+            <article class="full-article" itemscope itemtype="https://schema.org/NewsArticle">
+    <h1 itemprop="headline">Главная новость недели</h1>
+
+    <p class="article-meta">
+        Опубликовано: <time itemprop="datePublished" datetime="2026-03-04">4 марта 2026</time> |
+        Автор: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                 <span itemprop="name">Редакция ArtWave</span>
+               </span>
+    </p>
+
+   <img src="События.webp" 
+     srcset="События.webp 320w,
+             События.webp 480w,
+             События.webp 800w,
+             События.webp 1200w"
+     sizes="(max-width: 320px) 300px,
+            (max-width: 480px) 460px,
+            (max-width: 768px) 720px,
+            (max-width: 1024px) 900px,
+            1200px"
+     alt="Сцена с мероприятия — главная новость недели"
+     class="article-image"
+     loading="lazy">
+   <div itemprop="articleBody">
+            <p>
+                В мире культуры произошло значимое событие, которое уже
+                привлекло внимание зрителей и критиков. Новая постановка
+                объединяет современные художественные решения и
+                классические традиции искусства.
+            </p>
+
+            <p>
+                Организаторы отмечают высокий интерес публики.
+                Билеты были раскуплены в первые дни продаж.
+                Эксперты называют проект одним из самых ярких культурных
+                событий этого года.
+            </p>
+
+            <p>
+                В рамках мероприятия также прошли встречи с авторами,
+                мастер-классы и открытые обсуждения.
+                Посетители смогли задать вопросы и получить
+                уникальный культурный опыт.
+            </p>
+
+            <a href="index.html" class="btn">← Вернуться на главную</a>
+</div>
+        </article>
+
+    </div>
+
+</main>
+
+<footer>
+    <div class="container footer-container">
+        <p>© 2026 ArtWave</p>
+        <p>Email: info@artwave.ru</p>
+        <p>Телефон: +7 (900) 000-00-00</p>
+    </div>
+</footer>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Главная новость недели",
+      "datePublished": "2026-03-04T12:00:00+03:00",
+      "dateModified": "2026-03-04T18:30:00+03:00",
+      "author": {
+        "@type": "Person",
+        "name": "Редакция ArtWave"
+      },
+      "description": "Репортаж с главного культурного события недели: подробности, мнения критиков и фотоотчет.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "http://127.0.0.1:5500/images/кар.webp",
+        "caption": "Сцена с мероприятия — главная новость недели"
+      },
+      "articleBody": "В мире культуры произошло значимое событие, которое уже привлекло внимание зрителей и критиков. Новая постановка объединяет современные художественные решения и классические традиции искусства. Организаторы отмечают высокий интерес публики. Билеты были раскуплены в первые дни продаж. Эксперты называют проект одним из самых ярких культурных событий этого года. В рамках мероприятия также прошли встречи с авторами, мастер-классы и открытые обсуждения. Посетители смогли задать вопросы и получить уникальный культурный опыт.",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://127.0.0.1:5500/article.html"
+      }
+    }
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const burger = document.getElementById('burger-menu');
+        const nav = document.getElementById('main-nav');
+
+        if (burger && nav) {
+            burger.addEventListener('click', function() {
+              
+                nav.classList.toggle('active');
+                burger.classList.toggle('active');
+                
+              
+                const isExpanded = burger.classList.contains('active');
+                burger.setAttribute('aria-expanded', isExpanded);
+            });
+
+    
+            const navLinks = nav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    burger.classList.remove('active');
+                    burger.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+          
+        }
+    });
+</script>
+
+</body>
+</html>

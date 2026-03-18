@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Премьера спектакля — ArtWave</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel"=icon" type"=image/svg+xml" href"=favicon.svg">
+    <meta property="og:title" content="Премьера спектакля в театре | ArtWave">
+<meta property="og:description" content="Подробности премьеры: актерский состав, режиссер, отзывы зрителей. Фото и видео.">
+<meta property="og:image" content="http://127.0.0.1:5500/images/преем.jpg">
+<meta property="og:url" content="http://127.0.0.1:5500/theatre.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ArtWave">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-03-04">
+</head>
+<body>
+
+<header>
+    <div class="container header-container">
+        <a href="index.html" class="logo">ArtWave</a>
+        
+        <!-- Кнопка-бургер (появляется на мобильных) -->
+        <button class="burger-menu" id="burger-menu" aria-label="Меню" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Навигация (будет скрыта на мобильных по умолчанию) -->
+        <nav class="main-nav" id="main-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="article.html">Новости</a></li>
+                <li><a href="theatre.html">Театр</a></li>
+                <li><a href="cinema.html">Кино</a></li>
+                <li><a href="exhibition.html">Выставки</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="article-page">
+    <div class="container">
+        <article class="full-article">
+            <h2>Премьера спектакля</h2>
+            <p class="article-meta">4 марта 2026 | Раздел: Театр</p>
+
+            <img src="Постановка.jpg" 
+                 alt="Театральная постановка">
+
+            <p>
+                В городском театре состоялась долгожданная премьера.
+                Постановка сочетает современные художественные решения
+                и классические традиции сценического искусства.
+            </p>
+
+            <p>
+                Зрители отметили яркую актерскую игру, глубокий сюжет
+                и впечатляющие декорации.
+            </p>
+
+            <a href="index.html" class="btn">← Назад</a>
+        </article>
+    </div>
+</main>
+
+<footer>
+    <div class="container footer-container">
+        <p>© 2026 ArtWave</p>
+    </div>
+</footer>
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const burger = document.getElementById('burger-menu');
+        const nav = document.getElementById('main-nav');
+
+        if (burger && nav) {
+            burger.addEventListener('click', function() {
+              
+                nav.classList.toggle('active');
+                burger.classList.toggle('active');
+                
+              
+                const isExpanded = burger.classList.contains('active');
+                burger.setAttribute('aria-expanded', isExpanded);
+            });
+
+    
+            const navLinks = nav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    burger.classList.remove('active');
+                    burger.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+          
+        }
+    });
+</script>
+</body>
+</html>
