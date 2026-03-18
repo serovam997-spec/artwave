@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /cinema-ticket.html
+Disallow: /?*
+
+# Указываем путь к карте сайта
+Sitemap: https://serovam997-spec.github.io/artwave/sitemap.xml
+
+# Указываем основное зеркало сайта (для Яндекса)
+Host: https://serovam997-spec.github.io/artwave/
